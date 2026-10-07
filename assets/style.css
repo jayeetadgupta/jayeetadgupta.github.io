@@ -1,0 +1,1206 @@
+/* ==========================================================
+   JAYEETA DASGUPTA - PORTFOLIO
+   ========================================================== */
+
+:root {
+    --red: #c94d5c;
+    --rose: #b86670;
+    --dark: #713940;
+
+    --bg: #f5f2f1;
+    --paper: #fffdfc;
+    --panel: #eae4e5;
+
+    --ink: #191719;
+    --muted: #716c6e;
+    --line: #d8d0d2;
+
+    --max: 1180px;
+}
+
+
+/* ==========================================================
+   GLOBAL
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--ink);
+
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==========================================================
+   GENERAL LAYOUT
+   ========================================================== */
+
+.wrap {
+    width: min(var(--max), calc(100% - 40px));
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    color: var(--red);
+
+    font-size: 0.74rem;
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    background: rgba(245, 242, 241, 0.9);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(113, 108, 110, 0.16);
+}
+
+.navin {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 22px;
+}
+
+.brand {
+    font-size: 1rem;
+    font-weight: 950;
+
+    letter-spacing: -0.03em;
+
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.links a {
+    font-size: 0.92rem;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.links a:not(.btn):hover {
+    color: var(--red);
+}
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--red);
+    color: #ffffff;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(113, 57, 64, 0.18);
+}
+
+.btn.light {
+    background: #ffffff;
+    color: var(--dark);
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: var(--rose);
+    color: #ffffff;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.7fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 90px 0;
+}
+
+.hero .eyebrow {
+    color: #ffe6e9;
+}
+
+.hero h1 {
+    margin: 20px 0 34px;
+
+    font-size: clamp(4.2rem, 9vw, 8rem);
+
+    line-height: 0.82;
+
+    letter-spacing: -0.07em;
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #f5e2e4;
+
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================
+   HERO RINGS
+   ========================================================== */
+
+.rings {
+    position: relative;
+
+    height: 380px;
+}
+
+.rings i {
+    position: absolute;
+
+    inset: 50%;
+
+    border: 1px solid #dfa4ab;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.rings i:nth-child(1) {
+    width: 100px;
+    height: 100px;
+}
+
+.rings i:nth-child(2) {
+    width: 180px;
+    height: 180px;
+}
+
+.rings i:nth-child(3) {
+    width: 260px;
+    height: 260px;
+}
+
+.rings i:nth-child(4) {
+    width: 340px;
+    height: 340px;
+}
+
+.rings::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 22px;
+    height: 22px;
+
+    background: #f6dadd;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* ==========================================================
+   SECTION HEADERS
+   ========================================================== */
+
+.section-head {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 50px;
+}
+
+.section-head h2 {
+    margin: 10px 0;
+
+    font-size: clamp(2.5rem, 6vw, 5rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+.section-head p {
+    max-width: 530px;
+
+    color: var(--muted);
+}
+
+
+/* ==========================================================
+   PROJECT LIST
+   ========================================================== */
+
+.project-list {
+    border-top: 1px solid var(--line);
+}
+
+.project-row {
+    display: grid;
+
+    grid-template-columns:
+        90px
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 30px 4px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.project-row .num {
+    color: #bdb5b7;
+
+    font-size: 2.5rem;
+    font-weight: 950;
+}
+
+.project-row:first-child .num {
+    color: var(--red);
+}
+
+.project-row h3 {
+    margin: 0;
+
+    font-size: 1.6rem;
+}
+
+.project-row small {
+    color: var(--muted);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   PROJECT BUTTON
+   ========================================================== */
+
+.link-btn {
+    padding: 8px 0;
+
+    border: 0;
+
+    background: transparent;
+    color: var(--red);
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 850;
+
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   MODAL BACKGROUND
+   ========================================================== */
+
+.modal-shell {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+
+    background: rgba(42, 27, 30, 0.72);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   MODAL
+   ========================================================== */
+
+.modal {
+    position: relative;
+
+    width: min(1150px, 100%);
+
+    max-height: 92vh;
+
+    padding: 22px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: var(--bg);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 30px 80px rgba(30, 15, 18, 0.28);
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(201, 77, 92, 0.55)
+        transparent;
+}
+
+.modal::-webkit-scrollbar {
+    width: 7px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: rgba(201, 77, 92, 0.48);
+
+    border-radius: 999px;
+}
+
+
+/* ==========================================================
+   MODAL CLOSE BUTTON
+   ========================================================== */
+
+.modal-close {
+    position: sticky;
+
+    top: 0;
+
+    float: right;
+
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: var(--ink);
+
+    box-shadow:
+        0 5px 18px rgba(34, 20, 23, 0.1);
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================================
+   CASE STUDY
+   ========================================================== */
+
+.case {
+    padding: clamp(24px, 4vw, 52px);
+
+    background: var(--paper);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 18px 50px rgba(49, 27, 31, 0.06);
+}
+
+.case-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+
+    margin-bottom: 30px;
+}
+
+.case h3 {
+    margin: 8px 0;
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.045em;
+}
+
+.case .audience {
+    max-width: 430px;
+
+    color: var(--muted);
+}
+
+
+/* ==========================================================
+   PROJECT SCREENSHOTS
+
+   IMPORTANT:
+   Images are NOT forced into a fixed height anymore.
+   ========================================================== */
+
+.shots {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 40px;
+
+    width: 100%;
+
+    margin-top: 36px;
+    margin-bottom: 42px;
+}
+
+
+/* ==========================================================
+   INDIVIDUAL SCREENSHOT WRAPPER
+   ========================================================== */
+
+.post-image {
+    flex: 1 1 0;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    overflow: visible;
+}
+
+
+/* ==========================================================
+   ACTUAL POST IMAGE
+
+   No fixed height.
+   No cropping.
+   No stretching.
+   ========================================================== */
+
+.post-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 450px;
+
+    object-fit: contain;
+
+    object-position: top center;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px rgba(40, 25, 28, 0.12);
+}
+
+
+/* ==========================================================
+   EMPTY SCREENSHOT PLACEHOLDER
+   ========================================================== */
+
+.ph {
+    flex: 1 1 0;
+
+    min-width: 0;
+    min-height: 380px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: #eee9ea;
+
+    border: 1px dashed #b9afb1;
+
+    border-radius: 18px;
+
+    color: var(--muted);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ph small {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.06em;
+
+    opacity: 0.7;
+}
+
+
+/* ==========================================================
+   PURPOSE / THOUGHT BEHIND IT
+   ========================================================== */
+
+.thinking {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-top: 18px;
+}
+
+.note {
+    padding: 28px;
+
+    background: #f3eeee;
+
+    border-radius: 18px;
+}
+
+.note h4 {
+    margin: 0 0 10px;
+
+    color: var(--red);
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.note p {
+    margin: 0;
+
+    color: #494346;
+}
+
+
+/* ==========================================================
+   CONTENT WRITING
+   ========================================================== */
+
+.writing {
+    background: #eee8e8;
+}
+
+.writing-card {
+    padding: clamp(28px, 5vw, 60px);
+
+    background: var(--paper);
+
+    border-radius: 28px;
+}
+
+.writing-card h3 {
+    margin: 14px 0;
+
+    font-size: clamp(2rem, 5vw, 3.7rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+.meta {
+    color: var(--red);
+
+    font-size: 0.78rem;
+    font-weight: 850;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.excerpt {
+    max-width: 850px;
+
+    color: #494346;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+
+    line-height: 1.65;
+}
+
+.writing-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 35px;
+}
+
+
+/* ==========================================================
+   ABOUT
+   ========================================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.portrait {
+    aspect-ratio: 4 / 3;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--panel);
+
+    border: 1px dashed #b9afb1;
+    border-radius: 24px;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.about h2 {
+    font-size: clamp(2.4rem, 5vw, 4.7rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+}
+
+
+/* ==========================================================
+   TAGS
+   ========================================================== */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.tag {
+    padding: 8px 12px;
+
+    border: 1px solid var(--line);
+    border-radius: 999px;
+
+    font-size: 0.82rem;
+}
+
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.contact {
+    background: var(--rose);
+
+    color: #ffffff;
+}
+
+.contact h2 {
+    margin: 12px 0 28px;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.contact p {
+    color: #f2dfe1;
+}
+
+.contact-card {
+    margin-top: 38px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 22px;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #ffffff;
+
+    text-underline-offset: 4px;
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.footer {
+    padding: 30px 0;
+
+    background: #a65761;
+
+    color: #f8e8ea;
+
+    font-size: 0.82rem;
+}
+
+
+/* ==========================================================
+   LAPTOP / TABLET
+
+   When the screen isn't wide enough to display two
+   social posts clearly, change to one screenshot per row.
+
+   This keeps the text inside each screenshot readable.
+   ========================================================== */
+
+@media (max-width: 950px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr 0.5fr;
+    }
+
+
+    /* Stack project screenshots */
+
+    .shots {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 34px;
+    }
+
+
+    .post-image {
+        width: 100%;
+        flex: none;
+    }
+
+
+    .post-image img {
+        width: auto;
+        height: auto;
+
+        max-width: min(100%, 540px);
+    }
+
+
+    .ph {
+        width: min(100%, 540px);
+
+        min-height: 340px;
+
+        flex: none;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+    /* Navigation */
+
+    .links {
+        gap: 10px;
+    }
+
+    .links a:not(.btn) {
+        display: none;
+    }
+
+    .navin {
+        height: 64px;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 75px 0;
+    }
+
+
+    /* Hero */
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        padding: 75px 0;
+    }
+
+    .rings {
+        display: none;
+    }
+
+    .hero {
+        min-height: 610px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(
+                4rem,
+                20vw,
+                5.5rem
+            );
+    }
+
+
+    /* Section header */
+
+    .section-head {
+        display: block;
+    }
+
+
+    /* Project list */
+
+    .project-row {
+        grid-template-columns:
+            60px
+            1fr;
+    }
+
+    .project-row .link-btn {
+        grid-column: 2;
+
+        justify-self: start;
+    }
+
+
+    /* Modal */
+
+    .modal-shell {
+        padding: 10px;
+    }
+
+    .modal {
+        width: 100%;
+
+        max-height: 95vh;
+
+        padding: 10px;
+
+        border-radius: 20px;
+    }
+
+    .case {
+        padding: 22px 16px;
+
+        border-radius: 18px;
+    }
+
+    .case-top {
+        display: block;
+    }
+
+
+    /* Project screenshots */
+
+    .shots {
+        gap: 30px;
+
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+
+    .post-image img {
+        width: 100%;
+        height: auto;
+
+        max-width: 100%;
+
+        border-radius: 12px;
+    }
+
+
+    /* Purpose / Thought */
+
+    .thinking {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    /* Writing */
+
+    .writing-meta {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* Contact */
+
+    .contact-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .wrap {
+        width:
+            min(
+                var(--max),
+                calc(100% - 28px)
+            );
+    }
+
+
+    /* Nav resume */
+
+    .links .btn {
+        padding: 9px 12px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* Hero */
+
+    .hero h1 {
+        font-size:
+            clamp(
+                3.7rem,
+                21vw,
+                4.8rem
+            );
+    }
+
+
+    /* Screenshot spacing */
+
+    .shots {
+        gap: 26px;
+    }
+
+
+    /* Notes */
+
+    .note {
+        padding: 20px;
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+
+}
